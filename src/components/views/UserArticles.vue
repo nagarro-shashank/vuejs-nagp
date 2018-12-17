@@ -9,7 +9,12 @@
             <p v-if="profile">{{ profile.profile.bio }}</p>
             <button
               class="btn btn-sm btn-outline-secondary action-btn"
-              v-if="isLoggedIn && profile && !profile.profile.following"
+              v-if="
+                isLoggedIn &&
+                  profile &&
+                  !profile.profile.following &&
+                  !user.current
+              "
               v-on:click="followUser"
             >
               <i class="ion-plus-round"></i> &nbsp; Follow {{ username }}
