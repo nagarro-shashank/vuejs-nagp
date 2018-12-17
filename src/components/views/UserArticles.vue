@@ -13,7 +13,7 @@
                 isLoggedIn &&
                   profile &&
                   !profile.profile.following &&
-                  !user.current
+                  this.user != 'current'
               "
               v-on:click="followUser"
             >
